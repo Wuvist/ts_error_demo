@@ -18,9 +18,9 @@ function doPromise<T>(): Promise<T> {
 		return Promise.reject(err);
 	}).then(resp => {
 		let r: T;
-		
+
 		try {
-			r = JSON.parse(resp.data);	
+			r = JSON.parse(resp.data);
 		} catch (e) {
 			return Promise.reject({
 				msg: "decode error",
